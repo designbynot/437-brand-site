@@ -1,0 +1,110 @@
+@font-face {
+    font-family: 'Helvetica Bold';
+    src: url('https://fonts.cdnfonts.com/css/helvetica-neue-9') format('woff2');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Bold', sans-serif;
+    background: white;
+    color: black;
+    letter-spacing: -0.07em;
+    min-height: 100vh;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.guidelines {
+    text-align: left;
+}
+
+.guideline {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.colors-section {
+    margin-top: 40px;
+}
+
+.color-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ddd;
+}
+
+.brand-text {
+    font-size: 5rem;
+    font-weight: bold;
+    margin-left: 40px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    width: 100%;
+}
+
+.grid-item {
+    width: 100%;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .grid {
+        gap: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    body {
+        padding: 20px 10px;
+    }
+}
